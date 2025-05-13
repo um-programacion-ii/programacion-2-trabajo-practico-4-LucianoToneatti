@@ -4,13 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Libro {
+public class Prestamo {
     private int id;
-    private String isbn;
-    private String titulo;
-    private String autor;
-    private EstadodeLibro estado;
+    private String libro;
+    private String usuario;
+    private Date fechaPrestamo;
+    private Date fechaDevolucion;
 }
