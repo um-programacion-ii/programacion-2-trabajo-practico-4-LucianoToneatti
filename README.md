@@ -461,6 +461,59 @@ class LibroServiceImplTest {
   - Requisitos del sistema
   - Ejemplos de uso
   - Documentación de endpoints
+  
+## INSTRUCCIONES DE INSTALACIÓN
+ 
+- Primer paso abrir la terminal según si estas en windows o linux
+- Segundo paso dirigirte a algún lugar donde quieras clonar el repositorio(lo mejor seria crear una carpeta exclusivamente para este repositorio)
+- Tercer paso pegar los siguientes comandos en la terminal:
+```java
+git clone git@github.com:um-programacion-ii/programacion-2-trabajo-practico-4-LucianoToneatti.git
+```
+Una vez clonado hacemos:
+```java
+cd programacion-2-trabajo-practico-4-LucianoToneatti/
+```
+- Cuarto paso iniciamos el archivo clonado con IntelliJi IDEA o el editor de codigo que tengas 
+- Quinto paso compilar el archivo, normalmente esto se hace automaticamente si tienes IntelliJi IDEA
+- Sexto paso para iniciar vamos a ejecutar el archivo que esta en esta ubicación gestion/src/main/java/com/biblioteca/gestion/GestionBibliotecaApp.java
+
+## REQUISISTOS DEL SISTEMA
+- Spring Boot 3.4.5
+- Java 21 o superior
+- Maven 3.9.0 o superior
+- Mockito 
+- JUnit 5
+- MockMvc
+- Lombok (opcional)
+- Git y GitHub
+
+## DOCUMENTACIÓN DE ENDPOINTS
+Esta sección lista los endpoints disponibles en la API del Sistema de Gestión de Biblioteca.
+
+### 1. Endpoints de Libros (/api/libros)
+
+* **GET /api/libros**: Obtiene todos los libros.
+* **GET /api/libros/{id}**: Obtiene un libro por su ID.
+* **POST /api/libros**: Permite crear un nuevo libro.
+* **PUT /api/libros/{id}**: Permite actualizar un libro existente.
+* **DELETE /api/libros/{id}**: Permite eliminar un libro.
+
+### 2. Endpoints de Usuarios (/api/usuarios)
+
+* **GET /api/usuarios**: Obtiene todos los usuarios.
+* **GET /api/usuarios/{id}**: Obtiene un usuario por su ID.
+* **POST /api/usuarios**: Permite crear un nuevo usuario.
+* **PUT /api/usuarios/{id}**: Permite actualizar un usuario existente.
+* **DELETE /api/usuarios/{id}**: Permite eliminar un usuario.
+
+### 3. Endpoints de Préstamos (/api/prestamos)
+
+* **GET /api/prestamos**: Obtiene todos los préstamos.
+* **GET /api/prestamos/{id}**: Obtiene un préstamo por su ID.
+* **POST /api/prestamos**: Permite crear un nuevo préstamo.
+* **PUT /api/prestamos/{id}**: Permite actualizar un préstamo existente.
+* **DELETE /api/prestamos/{id}**: Permite eliminar un préstamo.
 
 ## 📚 Recursos Adicionales
 
@@ -531,6 +584,11 @@ El uso de Inteligencia Artificial (IA) en este trabajo práctico debe seguir las
    - La IA puede usarse para facilitar el aprendizaje
    - Documentar el proceso de desarrollo
    - Mantener un registro del progreso
+ 
+## Uso de la IA en el proyecto
+El uso de IA me ayudo a crear el Proyecto en Spring Boot y para la creación de los test en la Etapa 4. 
+
+
 
 ## 📝 Licencia
 
