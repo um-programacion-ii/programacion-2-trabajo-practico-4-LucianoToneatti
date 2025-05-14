@@ -10,10 +10,12 @@ public class GlobalException {
 
     @ExceptionHandler(LibroNoEncontradoException.class)
     public ResponseEntity<String> handleLibroNotFound(LibroNoEncontradoException ex) {
-        // Retorna un 404 Not Found
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
-
+    @ExceptionHandler(UsuarioNoEncontradoException.class)
+    public ResponseEntity<String> handleUsuarioNotFound(UsuarioNoEncontradoException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+    }
 
 }
 
