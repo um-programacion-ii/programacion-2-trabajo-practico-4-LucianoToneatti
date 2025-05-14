@@ -1,8 +1,8 @@
 package com.biblioteca.gestion.services;
 
+import com.biblioteca.gestion.exceptions.PrestamoNoEncontradoException;
 import com.biblioteca.gestion.models.Prestamo;
 import com.biblioteca.gestion.repositories.PrestamoRepository;
-import com.biblioteca.gestion.services.PrestamoService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,7 +19,7 @@ public class PrestamoServiceImpl implements PrestamoService {
     @Override
     public Prestamo buscarPorId(Long id) {
         return prestamoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Préstamo con ID " + id + " no encontrado"));
+                .orElseThrow(() -> new PrestamoNoEncontradoException(id));
     }
 
     @Override
@@ -34,13 +34,16 @@ public class PrestamoServiceImpl implements PrestamoService {
 
     @Override
     public void eliminar(Long id) {
+        if (!prestamoRepository.existsById(id)) {
+            throw new PrestamoNoEncontradoException(id);
+        }
         prestamoRepository.deleteById(id);
     }
 
     @Override
     public Prestamo actualizar(Long id, Prestamo prestamo) {
         if (!prestamoRepository.existsById(id)) {
-            throw new RuntimeException("Préstamo con ID " + id + " no encontrado");
+            throw new PrestamoNoEncontradoException(id);
         }
         prestamo.setId(id);
         return prestamoRepository.save(prestamo);

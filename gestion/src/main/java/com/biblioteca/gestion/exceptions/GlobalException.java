@@ -16,6 +16,10 @@ public class GlobalException {
     public ResponseEntity<String> handleUsuarioNotFound(UsuarioNoEncontradoException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
+    @ExceptionHandler(PrestamoNoEncontradoException.class)
+    public ResponseEntity<String> handlePrestamoNotFound(PrestamoNoEncontradoException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+    }
 
 }
 
