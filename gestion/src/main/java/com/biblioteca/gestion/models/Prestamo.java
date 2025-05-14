@@ -10,7 +10,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Prestamo {
-    private int id;
+    private Long id;
     private String libro;
     private String usuario;
     private Date fechaPrestamo;
