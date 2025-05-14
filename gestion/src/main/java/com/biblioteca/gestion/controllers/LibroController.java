@@ -1,7 +1,10 @@
 package com.biblioteca.gestion.controllers;
 
+import com.biblioteca.gestion.exceptions.LibroNoEncontradoException;
 import com.biblioteca.gestion.models.Libro;
 import com.biblioteca.gestion.services.LibroService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,13 +25,18 @@ public class LibroController {
     }
 
     @GetMapping("/{id}")
-    public Libro obtenerPorId(@PathVariable Long id) {
-        return libroService.buscarPorId(id);
+    public ResponseEntity<Libro> obtenerPorId(@PathVariable Long id) {
+        Libro libro = libroService.buscarPorId(id);
+        if (libro == null) {
+            throw new LibroNoEncontradoException(id);
+        }
+        return ResponseEntity.ok(libro);
     }
 
     @PostMapping
-    public Libro crear(@RequestBody Libro libro) {
-        return libroService.guardar(libro);
+    public ResponseEntity<Libro> crearLibro(@RequestBody Libro libro) {
+        Libro libroGuardado = libroService.guardar(libro);
+        return ResponseEntity.status(HttpStatus.CREATED).body(libroGuardado); // ← status 201
     }
 
     @PutMapping("/{id}")
