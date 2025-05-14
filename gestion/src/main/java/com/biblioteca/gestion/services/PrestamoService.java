@@ -10,5 +10,6 @@ public interface PrestamoService {
     Prestamo guardar(Prestamo prestamo);
     void eliminar(Long id);
     Prestamo actualizar(Long id, Prestamo prestamo);
+    Prestamo crearPrestamo(Long idUsuario, Long idLibro);
 }
 

@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -11,8 +12,8 @@ import java.util.Date;
 @AllArgsConstructor
 public class Prestamo {
     private Long id;
-    private String libro;
-    private String usuario;
-    private Date fechaPrestamo;
+    private Libro libro;
+    private Usuario usuario;
+    private LocalDate fechaPrestamo;
     private Date fechaDevolucion;
 }
