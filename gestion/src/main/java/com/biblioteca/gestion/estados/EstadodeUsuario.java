@@ -1,4 +1,4 @@
-package com.biblioteca.gestion;
+package com.biblioteca.gestion.estados;
 
 public enum EstadodeUsuario {
         ACTIVO,
