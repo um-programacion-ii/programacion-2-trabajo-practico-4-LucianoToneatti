@@ -41,4 +41,3 @@ public class PrestamoController {
         prestamoService.eliminar(id);
     }
 }
-
