@@ -9,4 +9,3 @@ public class LibroNoEncontradoException extends RuntimeException {
         super("Libro no encontrado con ISBN: " + isbn);
     }
 }
-
