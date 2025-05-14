@@ -1,5 +1,6 @@
-package com.biblioteca.gestion;
+package com.biblioteca.gestion.models;
 
+import com.biblioteca.gestion.estados.EstadodeUsuario;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

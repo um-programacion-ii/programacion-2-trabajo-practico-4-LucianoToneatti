@@ -1,4 +1,4 @@
-package com.biblioteca.gestion;
+package com.biblioteca.gestion.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
